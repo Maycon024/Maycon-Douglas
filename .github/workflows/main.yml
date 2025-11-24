@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: Simple Pipeline
 
 on:
   push:
@@ -14,17 +14,5 @@ jobs:
       - name: Baixar código do repositório
         uses: actions/checkout@v3
 
-      - name: Configurar ambiente Node (se você usar Node)
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: Instalar dependências
-        run: npm install
-
-      - name: Rodar testes (se tiver)
-        run: npm test
-
       - name: Finalizando
-        run: echo "Pipeline executada com sucesso!"
-
+        run: echo "Pipeline executada com sucesso! Nenhum build necessário."
